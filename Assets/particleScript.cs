@@ -3,7 +3,7 @@ using System.Collections;
 
 public class particleScript : MonoBehaviour {
 
-	public int bulletSpeed = 800;
+	public int particleSpeed = 800;
 	void Start () {
 		// Get the rigidbody component
 		// Set the bullet to destroy itself after 1 seconds
@@ -11,7 +11,7 @@ public class particleScript : MonoBehaviour {
 
 		// Push the bullet in the direction it is facing
 		//GetComponent<Rigidbody2D>().AddForce(transform.up * 400);
-		GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed);
+		GetComponent<Rigidbody2D>().AddForce(transform.up * particleSpeed);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {

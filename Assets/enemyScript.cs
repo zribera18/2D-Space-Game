@@ -10,7 +10,7 @@ public GameObject breakableObject;
 	void Start () {
 		Rigidbody2D r2d = GetComponent<Rigidbody2D>();
 		speed = Random.Range(-10.0f, 10.0f) * 100;
-		Destroy (gameObject, 20f);
+		Destroy (gameObject, 10f);
 		GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.left * speed);
 	}
 
