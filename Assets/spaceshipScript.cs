@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using System.Collections;
 
 public class spaceshipScript : MonoBehaviour {
@@ -85,8 +86,37 @@ public class spaceshipScript : MonoBehaviour {
 
 		 Vector3 targetPos = gameObject.transform.position;
 		 targetPos.y = Mathf.Clamp(transform.position.y, -13.75f, 13.75f);
+		 targetPos.x = Mathf.Clamp(transform.position.x, -5.0f, 1400000.0f);
 		 transform.position = targetPos;
+
+
 		 print("targetPos: " + targetPos);
+
+		//  if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
+		//  {
+		// 	 if ( Time.timeScale == 1 ) {
+		// 		 print( "PAUSED");
+		// 			 Time.timeScale = 0;
+		// 			 GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag ("onPause");
+		 //
+		// 				foreach(GameObject go in gameObjectArray)
+		// 				{
+		// 						go.SetActive (true);
+		// 						print("hello");
+		// 				}
+		// 	 } else if (Time.timeScale == 0) {
+		// 		 print ("Resume");
+		// 		 Time.timeScale = 1;
+		// 		 GameObject[] gameObjectArray = GameObject.FindGameObjectsWithTag ("onPause");
+		 //
+		// 			foreach(GameObject go in gameObjectArray)
+		// 			{
+		// 					go.SetActive (false);
+		// 			}
+		// 	 }
+		 //
+		 //
+		//  }
 		//  if (targetPos.y  > 12){
 		// 	 GetComponent<Rigidbody2D>().transform.position = new Vector3(targetPos.x, 12, transform.position.z);
 		//  }

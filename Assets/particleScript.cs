@@ -10,8 +10,8 @@ public class particleScript : MonoBehaviour {
 		Destroy (gameObject, 10f);
 
 		// Push the bullet in the direction it is facing
-		//GetComponent<Rigidbody2D>().AddForce(transform.up * 400);
-		GetComponent<Rigidbody2D>().AddForce(transform.up * particleSpeed);
+		GetComponent<Rigidbody2D>().AddForce(transform.up * 400);
+		GetComponent<Rigidbody2D>().AddForce(Vector3.left * 800);
 	}
 
 	void OnTriggerEnter2D(Collider2D other) {

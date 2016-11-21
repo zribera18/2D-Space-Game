@@ -26,7 +26,7 @@ public class spawnScript : MonoBehaviour {
 			// 		Instantiate(enemy1, spawnPoint, Quaternion.identity);
 			// } else {
 			// Create an enemy at the 'spawnPoint' position
-					Instantiate(enemy, spawnPoint, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+					Instantiate(enemy, spawnPoint, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 180.0f)));
 					//print("instantiated ")
 		//	}
 
