@@ -85,7 +85,10 @@ public class spaceshipScript : MonoBehaviour {
 		 targetPos.x = Mathf.Clamp(transform.position.x, -5.0f, 1500.0f);
 		 transform.position = targetPos;
 
-		 print("targetPos: " + targetPos);
+		 if (targetPos.x > 100.0f) {
+			 targetPos.x = 0.0f;
+			 transform.position = targetPos;
+		 }
 
 		//  if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
 		//  {
