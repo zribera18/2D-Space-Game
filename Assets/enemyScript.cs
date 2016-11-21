@@ -19,15 +19,11 @@ public GameObject breakableObject;
 
 		if (other.gameObject.tag == "ammunition") {
 				 			Destroy(gameObject);
-							print(" ~~~~~ hit ammunition block ~~~~~");
 		}
 		if ( gameObject.tag == "breakable" ){
 			Instantiate(breakableObject, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
-
-		//if ( gameObject.tag == "")
-
 	}
 
 	// Update is called once per frame

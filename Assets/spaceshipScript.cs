@@ -50,10 +50,6 @@ public class spaceshipScript : MonoBehaviour {
 		// 	GetComponent<Rigidbody2D>().AddRelativeForce(translation, ForceMode2D.Impulse);
 		// }
 
-		// float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
-		// rotation *= Time.deltaTime;
-		// transform.Rotate(0, 0 , -rotation);
-
 		 if( Input.GetAxis("Horizontal") < 0 ){
 		 	Vector2 translation = Input.GetAxis("Horizontal") * speed;
 		 	translation *= Time.deltaTime;
@@ -86,9 +82,8 @@ public class spaceshipScript : MonoBehaviour {
 
 		 Vector3 targetPos = gameObject.transform.position;
 		 targetPos.y = Mathf.Clamp(transform.position.y, -13.75f, 13.75f);
-		 targetPos.x = Mathf.Clamp(transform.position.x, -5.0f, 1400000.0f);
+		 targetPos.x = Mathf.Clamp(transform.position.x, -5.0f, 1500.0f);
 		 transform.position = targetPos;
-
 
 		 print("targetPos: " + targetPos);
 
@@ -121,9 +116,16 @@ public class spaceshipScript : MonoBehaviour {
 		// 	 GetComponent<Rigidbody2D>().transform.position = new Vector3(targetPos.x, 12, transform.position.z);
 		//  }
 		//  float x = Mathf.Clamp(targetPos.x, worldPosMin.x, worldPosMax.x);
-		//  float y = Mathf.Clamp(targetPos.y, worldPosMin.y, worldPosMax.y);
+		  //float y = Mathf.Clamp(targetPos.y, worldPosMin.y, worldPosMax.y);
+		//  targetPos = gameObject.transform.position;
+ 	// 	 targetPos.y = Mathf.Clamp(transform.position.y, -13.75f, 13.75f);
+ 	// 	 targetPos.x = Mathf.Clamp(transform.position.x, -5.0f, 1400000.0f);
 
-		 //GetComponent<Rigidbody2D>().transform.position = new Vector3(x, y, transform.position.z);
+// if (transform.position.x > 15f){
+// 		print("hello!");
+// 		transform.position = targetPos;
+// }
+		//GetComponent<Rigidbody2D>().transform.position = new Vector3(x, y, transform.position.z);
 
 	}
 }

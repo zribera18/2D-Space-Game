@@ -5,11 +5,9 @@ using System.Collections;
 public class loadOnClickScript : MonoBehaviour {
 GameObject[] pauseObjects;
 	// Use this for initialization
-	public void LoadScene(int level)
-    {
-        SceneManager.LoadScene (level);
-
-    }
+	public void LoadScene(int level) {
+  	SceneManager.LoadScene (level);
+  }
 
 		//hides objects with ShowOnPause tag
 		public void hidePaused(){
@@ -20,11 +18,9 @@ GameObject[] pauseObjects;
 		}
 
 		public void resume() {
-			print ("helooooo");
 			Time.timeScale = 1;
 			hidePaused();
 		}
-
 
     public void fin(int ignoreLevel)
     {

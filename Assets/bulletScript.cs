@@ -11,7 +11,6 @@ public class bulletScript : MonoBehaviour {
 		Destroy (gameObject, 10f);
 
 		// Push the bullet in the direction it is facing
-		//GetComponent<Rigidbody2D>().AddForce(transform.up * 400);
 		GetComponent<Rigidbody2D>().AddForce(transform.up * bulletSpeed);
 	}
 
