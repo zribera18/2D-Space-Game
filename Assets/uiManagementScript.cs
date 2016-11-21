@@ -28,6 +28,11 @@ public class uiManagementScript : MonoBehaviour {
 		}
 	}
 
+	public void resume() {
+		Time.timeScale = 1;
+		hidePaused();
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.P))
