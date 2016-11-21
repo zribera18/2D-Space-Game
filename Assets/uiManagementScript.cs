@@ -5,14 +5,30 @@ using System.Collections;
 public class uiManagementScript : MonoBehaviour {
 
 	GameObject[] pauseObjects;
+	GameObject[] gameOverObjects;
+		public static bool isGameOver;
 
 	// Use this for initialization
 	void Start () {
 		Time.timeScale = 1;
 		pauseObjects = GameObject.FindGameObjectsWithTag("onPause");
+		gameOverObjects = GameObject.FindGameObjectsWithTag("onGameOver");
 		hidePaused();
+		hideGameOver();
 	}
 
+void hideGameOver() {
+	foreach(GameObject g in gameOverObjects){
+		g.SetActive(false);
+	}
+
+}
+public void loadGameOver() {
+	//gameOverObjects = GameObject.FindGameObjectsWithTag("onGameOver");
+	foreach(GameObject g in gameOverObjects){
+		g.SetActive(true);
+	}
+}
 	//shows objects with ShowOnPause tag
 	void showPaused(){
 
@@ -27,6 +43,10 @@ public class uiManagementScript : MonoBehaviour {
 			g.SetActive(false);
 		}
 	}
+
+
+
+
 
 	public void resume() {
 		Time.timeScale = 1;
@@ -47,6 +67,12 @@ public class uiManagementScript : MonoBehaviour {
 				Time.timeScale = 1;
 				hidePaused();
 			}
+	}
+	if ( isGameOver ) {
+		if ( Time.timeScale == 1 ) {
+				Time.timeScale = 0;
+				loadGameOver();
+		}
 	}
 }
 

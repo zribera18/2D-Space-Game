@@ -5,8 +5,10 @@ using System.Collections;
 public class loadOnClickScript : MonoBehaviour {
 GameObject[] pauseObjects;
 GameObject[] menuObjects;
+
 	// Use this for initialization
 	public void LoadScene(int level) {
+		uiManagementScript.isGameOver = false;
   	SceneManager.LoadScene (level);
   }
 
@@ -30,6 +32,7 @@ GameObject[] menuObjects;
 			}
 
 		}
+
 
     public void fin(int ignoreLevel)
     {

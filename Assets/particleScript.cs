@@ -31,7 +31,9 @@ public class particleScript : MonoBehaviour {
 		if (other.gameObject.tag == "ammunition") {
 
 				 //if ( (gameObject.name != "enemy_big_breakable") && (gameObject.name.Contains("enemy"))) {
+
 							Destroy(gameObject);
+
 				 //}
 		//	Destroy(gameObject);
 			print("Destroyed particle");
