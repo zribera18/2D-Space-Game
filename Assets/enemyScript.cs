@@ -4,6 +4,7 @@ using System.Collections;
 public class enemyScript : MonoBehaviour {
 
 public GameObject breakableObject;
+public GameObject explosion;
 	public float speed;
 
 	//public uiManagementScript x;
@@ -25,6 +26,7 @@ public GameObject breakableObject;
 
 	 if ( other.tag == "ammunition" ){
 			Instantiate(breakableObject, transform.position, transform.rotation);
+			Instantiate(explosion, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
 		if (other.gameObject.tag == "Player") {
