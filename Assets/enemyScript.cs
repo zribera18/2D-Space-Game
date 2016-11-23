@@ -23,7 +23,7 @@ public GameObject breakableObject;
 
 
 
-	 if ( gameObject.tag == "breakable" ){
+	 if ( other.tag == "ammunition" ){
 			Instantiate(breakableObject, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
