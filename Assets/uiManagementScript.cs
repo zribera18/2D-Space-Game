@@ -6,10 +6,12 @@ public class uiManagementScript : MonoBehaviour {
 
 	GameObject[] pauseObjects;
 	GameObject[] gameOverObjects;
+
 		public static bool isGameOver;
 
 	// Use this for initialization
 	void Start () {
+		isGameOver = false;
 		Time.timeScale = 1;
 		pauseObjects = GameObject.FindGameObjectsWithTag("onPause");
 		gameOverObjects = GameObject.FindGameObjectsWithTag("onGameOver");
